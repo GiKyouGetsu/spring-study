@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.wei.pojo.Address"></bean>
+    <bean id="student" class="com.wei.pojo.Student">
+        <property name="name" value="小强"></property>
+        <property name="address" ref="address"></property>
+        <property name="nullStr">
+            <null/>
+        </property>
+
+        <property name="books">
+            <array>
+                <value>语文</value>
+                <value>数学</value>
+            </array>
+        </property>
+
+        <property name="hobbies">
+            <list>
+                <value> Jogger</value>
+                <value> Basketball</value>
+            </list>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="sId" value="1201254"></entry>
+                <entry key="passport" value="111382199586850236"></entry>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>DOTA</value>
+                <value>PUBG</value>
+            </set>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="dbName">PostGres</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
